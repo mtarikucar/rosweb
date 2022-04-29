@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>RACLAB-FAAL</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/RACLAB5-1-1024x181.png" rel="icon">
+  <link href="assets/img/RACLAB5-1-1024x181.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Variables CSS Files. Uncomment your preferred color scheme -->
+  <link href="assets/css/variables.css" rel="stylesheet">
+  <!-- <link href="assets/css/variables-blue.css" rel="stylesheet"> -->
+  <!-- <link href="assets/css/variables-green.css" rel="stylesheet"> -->
+  <!-- <link href="assets/css/variables-orange.css" rel="stylesheet"> -->
+  <!-- <link href="assets/css/variables-purple.css" rel="stylesheet"> -->
+  <!-- <link href="assets/css/variables-red.css" rel="stylesheet"> -->
+  <!-- <link href="assets/css/variables-pink.css" rel="stylesheet"> -->
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!--========== ROSLIBWEBTOOLS ==========-->
+
+</head>
+
+<body onload="init()">
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top" data-scrollto-offset="0">
+    <div class="container-fluid d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center scrollto me-auto me-lg-0">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1>connection status:
+          <span id="connecting" style="display: none;"> connecting</span>
+          <span id="connected" style="display: none;"> connected</span>
+          <span id="closed" style="display: none;"> closed</span>
+          <span id="error" style="display: none;"> not connected</span>
+        </h1>
+
+      </a>
+
+      <nav id="navbar" class="navbar">
+
+        <ul>
+          <li><a class="nav-link scrollto" href="index.html#Control">Control</a></li>
+          <li><a class="nav-link scrollto" href="index.html#Map">Map</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle d-none"></i>
+      </nav><!-- .navbar -->
+    </div>
+    <div class="messages" id="messages"></div>
+  </header><!-- End Header -->
+
+  <section id="hero-animated" class="hero-animated d-flex align-items-center">
+    <div class="container d-flex flex-column justify-content-center align-items-center text-center position-relative"
+      data-aos="zoom-out">
+      <img src="assets/img/RACLAB5-1-1024x181.png" class="img-fluid animated">
+      <p>Namely, that no bearer of burdens can bear the burden of another; That man can have nothing but what he strives
+        for </p>
+      <div class="d-flex">
+        <a href="#Control" class="btn-get-started scrollto">Get Started</a>
+      </div>
+    </div>
+  </section>
+
+  <main id="main">
+
+    <!-- ======= HOW TO Section ======= -->
+
+    <section id="HOW" class="featured-services">
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-xl-3 col-md-6 d-flex" data-aos="zoom-out">
+            <div class="service-item position-relative">
+              <h4><a href="" class="stretched-link">ROUTE</a></h4>
+              <p> build a route form PANEL</p>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-md-6 d-flex" data-aos="zoom-out" data-aos-delay="200">
+            <div class="service-item position-relative">
+              <h4><a href="" class="stretched-link">PARAMS</a></h4>
+              <p>you can examine vehicle params from PARAMS</p>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-md-6 d-flex" data-aos="zoom-out" data-aos-delay="400">
+            <div class="service-item position-relative">
+              <h4><a href="" class="stretched-link">MAP</a></h4>
+              <p>you can see vehicle status on map from MAP</p>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-md-6 d-flex" data-aos="zoom-out" data-aos-delay="600">
+            <div class="service-item position-relative">
+              <h4><a href="" class="stretched-link">END</a></h4>
+              <p>you have to shut down the vehicle when the missions are finished</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- End Featured Services Section -->
+
+    <!-- ======= CONTROL Section ======= -->
+    <section id="Control" class="about">x
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <h2>Control</h2>
+          <p>build a route and throw the product</p>
+        </div>
+
+        <div class="row g-4 g-lg-5" data-aos="fade-up" data-aos-delay="200">
+
+          <section class="home section col-lg-12">
+            <div class="row d-flex justify-content-evenly">
+              <div class="col-lg-6 mt-3">
+                <div class="card row" id="Panel">
+                  <div class="card-header">
+                    <h3 class="card-title">rota oluştur</h3>
+                  </div>
+                  <div class="card-body">
+                    <form name="form" id="form_queue">
+                      <div class="form row">
+                        <div class="form-group col-lg-6 mt-2">
+                          <select class="form-select" aria-label="Default select example"
+                            aria-label=".form-select-lg example" name="konumlar" id="target">
+                            <option selected>-</option>
+                            <option>A</option>
+                            <option>B</option>
+                            <option>C</option>
+                            <option>D </option>
+                          </select>
+                        </div>
+                        <div class="form-group col-lg-6 mt-2">
+                          <select class="form-select" aria-label="Default select example"
+                            aria-label=".form-select-lg example" name="durumlar" id="job">
+                            <option selected>TRANSIT</option>
+                            <option>YUK_ALINACAK</option>
+                            <option>YUK_BIRAKILACAK</option>
+                          </select>
+                        </div>
+                        <div class="center mt-3">
+                          <button class="col-lg-12 btn btn-outline-warning" type="button" id="add">konumu ekle</button>
+                        </div>
+                      </div>
+                      <div class="card-body" id="sub-card-body">
+                        <hr>
+                        <h3 class="card-title">Sırasıyla gidilecek konumlar</h3>
+                        <hr>
+                        <table class="table table-dark">
+                          <thead>
+                            <tr>
+                              <th scope="col"> sıra </th>
+                              <th scope="col"> gidilecek konum </th>
+                              <th scope="col"> gidildiğinde ne yapılacak </th>
+                            </tr>
+                          </thead>
+                          <tbody id="queue_of_missons">
+
+                          </tbody>
+                        </table>
+                        <div class="center row d-flex justify-content-evenly">
+                          <button class="col-lg-5 btn btn-outline-success mt-3" type="button" id="send">rotayı
+                            gönder</button>
+                          <button class="col-lg-5 btn btn-outline-success mt-3" type="button" id="command">görevi
+                            başlat</button>
+                        </div>
+                        <div class="center row d-flex justify-content-evenly">
+
+                          <button class="col-lg-5 btn btn-outline-danger mt-3" type="reset" id="clear-all">rotayı
+                            sıfırla</button>
+                          <button class="col-lg-5 btn btn-outline-danger mt-3" type="button" id="cancel">çalışmayı
+                            durdur</button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+
+                <div class="col-lg-12 mt-3">
+                  <div class="card row">
+                    <div class="card-header">
+                      <h3 class="card-title">gelen veriler</h3>
+                    </div>
+                    <div class="card-body">
+                      <form class="form" id="data_form">
+                        <div class="form row">
+                          <div class="form-group col-lg-6 center row">
+                            <p>odometri verisi: </p>
+                            <p id="odom"></p>
+                          </div>
+                          <div class="form-group col-lg-6 center">
+                            <p id="pose">konum verisi: 25x 46y</p>
+                          </div>
+                          <div class="form-group col-lg-6 center row">
+                            <p>IMU: </p>
+                            <p id="imu"> </p>
+                          </div>
+                          <div class="form-group col-lg-6 center">
+                            <p>konum verisi: 25x 46y</p>
+                          </div>
+
+                        </div>
+                        <div class="card-body">
+                          <hr>
+                          <h3 class="card-title">tamamlanan görev</h3>
+                          <hr>
+                          <table class="table table-dark">
+                            <thead>
+                              <tr>
+                                <th scope="col"> sıra </th>
+                                <th scope="col"> gidilecek konum </th>
+                                <th scope="col"> gidildiğinde ne yapılacak </th>
+                              </tr>
+                            </thead>
+                            <tbody id="completed_missions">
+
+                            </tbody>
+                          </table>
+                          <div class="center" id="Params">
+                            <a class="col-lg-5 btn btn-outline-danger" type="button" id="clear-all">çalışmayı
+                              durdur</a>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+        </div>
+    </section><!-- End About Section -->
+
+    <section id="Map" class="about">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <h2>Map</h2>
+          <p>Sıradaki konum:
+          <h5 id="next-point">sırdaki hedef A noktası</h5>
+          </p>
+        </div>
+
+        <div class="row g-4 g-lg-5" data-aos="fade-up" data-aos-delay="200">
+
+          <div
+            class="container d-flex flex-column justify-content-center align-items-center text-center position-relative"
+            data-aos="zoom-out">
+            <div id="map"></div>
+          </div>
+
+        </div>
+    </section><!-- End About Section -->
+
+
+
+    <!-- ======= Testimonials Section ======= -->
+    <section id="testimonials" class="testimonials">
+      <div class="container" data-aos="fade-up">
+
+        <div class="testimonials-slider swiper">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+                <h3>Saul Goodman</h3>
+                <h4>Ceo &amp; Founder</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium
+                  quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
+                <h3>Sara Wilsson</h3>
+                <h4>Designer</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis
+                  quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
+                <h3>Jena Karlis</h3>
+                <h4>Store Owner</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim
+                  tempor labore quem eram duis noster aute amet eram fore quis sint minim.
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
+                <h3>Matt Brandon</h3>
+                <h4>Freelancer</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit
+                  minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
+                <h3>John Larson</h3>
+                <h4>Entrepreneur</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa
+                  labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+    </section><!-- End Testimonials Section -->
+  </main><!-- End #main -->
+
+
+
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+
+  <!-- library defined JS files -->
+  <script src="assets/js/main.js"></script>
+  <script src="https://static.robotwebtools.org/EaselJS/current/easeljs.js"></script>
+  <script src="https://static.robotwebtools.org/EventEmitter2/current/eventemitter2.min.js"></script>
+  <script src="./assets/build/roslib.js"></script>
+  <script src="./assets/build/ros2d.js"></script>
+
+  <!-- programmer defined JS File -->
+  <script src="assets/js/UI.js"></script>
+  <script src="assets/js//Mission.js"></script>
+  <script src="assets/js/Storage.js"></script>
+  <script src="assets/js/Ros_connection_control.js"></script>
+  <script src="assets/js/Roslib.js"></script>
+  <script src="assets/js/map.js"></script>
+  <script src="assets/js/app.js"></script>
+
+</body>
+
+</html>
